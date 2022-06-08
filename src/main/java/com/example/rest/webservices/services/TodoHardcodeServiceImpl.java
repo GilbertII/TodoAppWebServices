@@ -13,14 +13,14 @@ import java.util.ArrayList;
 @Slf4j
 public class TodoHardcodeServiceImpl implements TodoHardcodeService {
 
-    private static List<Todo> todos = new ArrayList();
+    private static final List<Todo> todos = new ArrayList();
     private static long idCounter = 0;
 
-    {
+    static {
         // TODO: 6/7/2022
-        todos.add(new Todo(++idCounter, "GII", "Learn Spring Boot", new Date(), false));
-        todos.add(new Todo(++idCounter, "GII", "Learn React JS", new Date(), false));
-        todos.add(new Todo(++idCounter, "GII", "Learn JavaScript", new Date(), false));
+        todos.add(new Todo(++idCounter, "test", "Learn Spring Boot", new Date(), false));
+        todos.add(new Todo(++idCounter, "test", "Learn React JS", new Date(), false));
+        todos.add(new Todo(++idCounter, "test", "Learn JavaScript", new Date(), false));
     }
 
     @Override
