@@ -27,4 +27,36 @@ public class TodoHardcodeServiceImpl implements TodoHardcodeService {
     public List<Todo> findAll() {
         return todos;
     }
+
+    @Override
+    public Todo findById(Long id){
+        return todos.stream().filter(todo-> todo.getId().compareTo(id) ==0).findFirst().get();
+    }
+
+    @Override
+    public Todo deleteById(Long id) {
+        Todo todo = findById(id);
+
+        if (todo==null) return null;
+
+        todos.remove(todo);
+        return todo;
+    }
+
+    @Override
+    public Todo saveOrUpdateTodo(Todo todo) {
+
+        if (todo.getId() == null || (todo.getId() == -1 || todo.getId() == 0)) {
+            todo.setId(++idCounter);
+            todos.add(todo);
+        } else {
+            Todo updateTodo = findById(todo.getId());
+            updateTodo.setDescription(todo.getDescription());
+            updateTodo.setUsername(todo.getUsername());
+            updateTodo.setTargetDate(todo.getTargetDate());
+            updateTodo.setDone(todo.isDone());
+        }
+
+        return todo;
+    }
 }
