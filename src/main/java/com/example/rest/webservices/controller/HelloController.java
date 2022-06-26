@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping(path = "/api/hello")
-@CrossOrigin( origins = "http://localhost:4200")
+@CrossOrigin( origins = "http://localhost:4200", allowCredentials = "true", allowedHeaders = "*")
 public class HelloController {
 
     @GetMapping("getHelloWorld")

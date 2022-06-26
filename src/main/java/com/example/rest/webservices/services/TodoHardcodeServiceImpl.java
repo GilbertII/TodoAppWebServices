@@ -18,9 +18,9 @@ public class TodoHardcodeServiceImpl implements TodoHardcodeService {
 
     static {
         // TODO: 6/7/2022
-        todos.add(new Todo(++idCounter, "test", "Learn Spring Boot", new Date(), false));
-        todos.add(new Todo(++idCounter, "test", "Learn React JS", new Date(), false));
-        todos.add(new Todo(++idCounter, "test", "Learn JavaScript", new Date(), false));
+        todos.add(new Todo(++idCounter, "user", "Learn Spring Boot", new Date(), false));
+        todos.add(new Todo(++idCounter, "user", "Learn React JS", new Date(), false));
+        todos.add(new Todo(++idCounter, "user", "Learn JavaScript", new Date(), false));
     }
 
     @Override
