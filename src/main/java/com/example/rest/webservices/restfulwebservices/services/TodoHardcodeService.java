@@ -1,6 +1,6 @@
-package com.example.rest.webservices.services;
+package com.example.rest.webservices.restfulwebservices.services;
 
-import com.example.rest.webservices.entity.Todo;
+import com.example.rest.webservices.restfulwebservices.entity.Todo;
 
 import java.util.List;
 

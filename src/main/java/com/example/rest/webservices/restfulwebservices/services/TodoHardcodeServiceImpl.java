@@ -1,12 +1,12 @@
-package com.example.rest.webservices.services;
+package com.example.rest.webservices.restfulwebservices.services;
 
-import com.example.rest.webservices.entity.Todo;
+import com.example.rest.webservices.restfulwebservices.entity.Todo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.ArrayList;
 
 
 @Service
@@ -29,15 +29,15 @@ public class TodoHardcodeServiceImpl implements TodoHardcodeService {
     }
 
     @Override
-    public Todo findById(Long id){
-        return todos.stream().filter(todo-> todo.getId().compareTo(id) ==0).findFirst().get();
+    public Todo findById(Long id) {
+        return todos.stream().filter(todo -> todo.getId().compareTo(id) == 0).findFirst().get();
     }
 
     @Override
     public Todo deleteById(Long id) {
         Todo todo = findById(id);
 
-        if (todo==null) return null;
+        if (todo == null) return null;
 
         todos.remove(todo);
         return todo;

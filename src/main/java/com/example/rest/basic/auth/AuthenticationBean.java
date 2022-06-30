@@ -1,13 +1,13 @@
-package com.example.rest.webservices.bean;
+package com.example.rest.basic.auth;
 
-public class HelloWorldBean {
+public class AuthenticationBean {
 
     private String message;
 
-    public HelloWorldBean() {
+    public AuthenticationBean() {
     }
 
-    public HelloWorldBean(String message) {
+    public AuthenticationBean(String message) {
         this.message = message;
     }
 
